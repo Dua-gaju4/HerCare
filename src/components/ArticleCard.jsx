@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, Clock3, Flower2, HeartPulse, Leaf, MoonStar, Sparkles, UtensilsCrossed } from 'lucide-react'
+import { ArrowRight, CalendarDays, Clock3, Flower2, HeartPulse, Leaf, MoonStar, Sparkles, UserCircle2, UtensilsCrossed } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const iconMap = {
