@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "understanding-hormonal-balance",
+    "title": "Understanding Hormonal Balance in Everyday Life",
+    "author": "Dr. Imani Cole",
+    "publishedDate": "2026-07-18",
+    "category": "Hormonal Health",
+    "shortDescription": "Learn how sleep, nutrition, and stress can shape the way hormones affect your cycle and energy.",
+    "primaryColor": "#E91E63",
+    "secondaryColor": "#FBCFE8",
+    "imageLabel": "Hormones",
+    "keyPoints": ["Hormones respond to sleep quality", "Balanced meals support stability", "Stress management matters"],
+    "content": [
+      "Hormones influence cycle regularity, mood, skin health, energy, and fertility. Small daily habits can help you feel more steady over time.",
+      "Start with the basics: consistent sleep, meals with protein and fiber, regular hydration, and movement that feels sustainable. These choices support the systems that help your body regulate itself.",
+      "If symptoms feel disruptive or new, keep notes and discuss them with a healthcare professional so you can understand what is changing and why."
+    ]
+  },
+  {
+    "slug": "nourishing-iron-rich-meals",
+    "title": "Nourishing Iron-Rich Meals for Better Energy",
+    "author": "Amina Shah, RD",
+    "publishedDate": "2026-07-12",
+    "category": "Nutrition",
+    "shortDescription": "Practical ways to build iron-rich plates that support energy, focus, and recovery.",
+    "primaryColor": "#9C27B0",
+    "secondaryColor": "#F5D0FE",
+    "imageLabel": "Iron",
+    "keyPoints": ["Pair iron with vitamin C", "Include both plant and animal sources", "Track symptoms of low iron"],
+    "content": [
+      "Iron is essential for healthy blood cells. Women with heavy periods, pregnancy, or low-iron diets may need to pay extra attention to intake.",
+      "Great choices include lentils, beans, spinach, pumpkin seeds, lean meat, fortified cereals, and tofu. Pair meals with citrus, berries, tomatoes, or peppers to support absorption.",
+      "If fatigue continues despite better eating, ask for evaluation because iron deficiency can have several causes beyond food alone."
+    ]
+  },
+  {
+    "slug": "mental-health-and-the-cycle",
+    "title": "Mental Health and the Menstrual Cycle",
+    "author": "Nia Patel, LCSW",
+    "publishedDate": "2026-06-29",
+    "category": "Mental Health",
+    "shortDescription": "How to notice emotional patterns across the cycle and protect your emotional wellbeing.",
+    "primaryColor": "#DB2777",
+    "secondaryColor": "#F9A8D4",
+    "imageLabel": "Mind",
+    "keyPoints": ["Mood changes can be cyclical", "Routine can reduce overwhelm", "Support is appropriate when symptoms persist"],
+    "content": [
+      "Mood, anxiety, and motivation can fluctuate with hormonal shifts across the cycle. Recognizing patterns can help make those changes feel more manageable.",
+      "A stable routine, gentler expectations during harder days, and simple stress-release habits like breathing, journaling, or walking can help you stay grounded.",
+      "If sadness, anxiety, or irritability becomes intense or interferes with life, talk to a clinician. You do not need to wait until things feel unmanageable."
+    ]
+  },
+  {
+    "slug": "pregnancy-nutrition-basics",
+    "title": "Pregnancy Nutrition Basics You Can Actually Use",
+    "author": "Dr. Leila Morgan",
+    "publishedDate": "2026-06-14",
+    "category": "Pregnancy Care",
+    "shortDescription": "Simple nutrition guidance for supporting both energy and fetal development during pregnancy.",
+    "primaryColor": "#F472B6",
+    "secondaryColor": "#FCE7F3",
+    "imageLabel": "Pregnancy",
+    "keyPoints": ["Protein and folate matter", "Hydration is foundational", "Prenatal care personalizes guidance"],
+    "content": [
+      "Pregnancy changes nutritional needs. Instead of chasing perfect meals, focus on consistency: protein, vegetables, whole grains, fruit, healthy fats, and enough fluids.",
+      "Prenatal vitamins can help fill in nutrient gaps, but they do not replace food. If nausea or food aversions are an issue, small frequent meals often work better than large plates.",
+      "Always follow individualized advice from your prenatal care team, especially if you have anemia, diabetes, or digestive concerns."
+    ]
+  },
+  {
+    "slug": "hygiene-habits-that-support-comfort",
+    "title": "Hygiene Habits That Support Comfort and Confidence",
+    "author": "Maya Fernandez, RN",
+    "publishedDate": "2026-05-30",
+    "category": "Hygiene",
+    "shortDescription": "Gentle hygiene habits that protect comfort without overcomplicating your routine.",
+    "primaryColor": "#F43F5E",
+    "secondaryColor": "#FED7E2",
+    "imageLabel": "Care",
+    "keyPoints": ["Use gentle products", "Change sanitary products regularly", "Watch for irritation or odor changes"],
+    "content": [
+      "Comfort-centered hygiene is about consistency, not perfection. Use mild, unscented products when possible and avoid aggressive cleansing routines that can irritate sensitive skin.",
+      "During menstruation, change pads, tampons, or cups on a regular schedule. If you notice persistent odor, itching, or discomfort, get checked for possible infection or irritation.",
+      "Choosing breathable underwear, wiping front to back, and keeping hydrated all support a healthier routine."
+    ]
+  },
+  {
+    "slug": "building-a-sustainable-wellness-routine",
+    "title": "Building a Sustainable Wellness Routine",
+    "author": "Sofia Reed, MPH",
+    "publishedDate": "2026-05-11",
+    "category": "Lifestyle",
+    "shortDescription": "A realistic framework for sleep, movement, stress care, and recovery habits.",
+    "primaryColor": "#BE185D",
+    "secondaryColor": "#FBCFE8",
+    "imageLabel": "Wellness",
+    "keyPoints": ["Start small and repeatable", "Tie habits to existing routines", "Consistency matters more than intensity"],
+    "content": [
+      "A sustainable routine is one you can keep on an ordinary day. Choose one or two habits at a time rather than rebuilding your whole life overnight.",
+      "Protect sleep, move in ways you enjoy, hydrate regularly, and build in small pauses for breath or reflection. When the plan is realistic, it becomes easier to keep.",
+      "Your best routine is the one that leaves room for being human. Adjust it as your schedule and energy change."
+    ]
+  }
+]

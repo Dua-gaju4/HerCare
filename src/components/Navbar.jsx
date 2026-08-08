@@ -29,6 +29,12 @@ const Navbar = () => {
           <a href="#about" className="transition hover:text-[#E91E63]">About</a>
           <a href="#features" className="transition hover:text-[#E91E63]">Features</a>
           <a href="#faq" className="transition hover:text-[#E91E63]">FAQ</a>
+          <NavLink to="/diseases" className="transition hover:text-[#E91E63]">
+            Library
+          </NavLink>
+          <NavLink to="/articles" className="transition hover:text-[#E91E63]">
+            Articles
+          </NavLink>
           {auth?.isAuthenticated ? (
             <>
               <NavLink to="/dashboard" className="transition hover:text-[#E91E63]">
@@ -61,6 +67,12 @@ const Navbar = () => {
             <a href="#about" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">About</a>
             <a href="#features" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">Features</a>
             <a href="#faq" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">FAQ</a>
+            <NavLink to="/diseases" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">
+              Library
+            </NavLink>
+            <NavLink to="/articles" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">
+              Articles
+            </NavLink>
             {auth?.isAuthenticated ? (
               <>
                 <NavLink to="/dashboard" onClick={() => setIsOpen(false)} className="transition hover:text-[#E91E63]">Dashboard</NavLink>

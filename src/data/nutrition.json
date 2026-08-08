@@ -1,0 +1,68 @@
+{
+  "overview": "Nutrition support for women’s health works best when it feels practical, flexible, and rooted in daily life.",
+  "sections": [
+    {
+      "slug": "healthy-foods",
+      "title": "Healthy Foods",
+      "icon": "Leaf",
+      "description": "Build meals around colorful, fiber-rich, and protein-supportive foods.",
+      "items": ["Leafy greens", "Whole grains", "Beans and lentils", "Greek yogurt", "Avocados", "Berries"]
+    },
+    {
+      "slug": "foods-to-avoid",
+      "title": "Foods to Avoid",
+      "icon": "TriangleAlert",
+      "description": "Limit items that often worsen bloating, blood sugar swings, or low energy.",
+      "items": ["Ultra-processed snacks", "Sugary drinks", "Deep-fried foods", "Excess alcohol", "Very salty fast food"]
+    },
+    {
+      "slug": "daily-nutrition-tips",
+      "title": "Daily Nutrition Tips",
+      "icon": "CalendarDays",
+      "description": "Simple habits can make eating feel more balanced across a busy week.",
+      "items": ["Eat within a steady rhythm", "Include protein at breakfast", "Pair carbs with fiber", "Plan one nourishing snack"]
+    },
+    {
+      "slug": "iron-rich-foods",
+      "title": "Iron-Rich Foods",
+      "icon": "Droplets",
+      "description": "Iron supports energy, cognition, and healthy blood production.",
+      "items": ["Lentils", "Spinach", "Red meat", "Pumpkin seeds", "Tofu", "Fortified cereal"]
+    },
+    {
+      "slug": "calcium-sources",
+      "title": "Calcium Sources",
+      "icon": "Bone",
+      "description": "Calcium supports bones, muscles, and nerve function.",
+      "items": ["Milk", "Yogurt", "Cheese", "Fortified plant milk", "Tofu", "Sardines"]
+    },
+    {
+      "slug": "hydration-tips",
+      "title": "Hydration Tips",
+      "icon": "Droplets",
+      "description": "Hydration supports digestion, energy, and cycle comfort.",
+      "items": ["Carry a water bottle", "Start the day with water", "Flavor with citrus or mint", "Sip through meals"]
+    },
+    {
+      "slug": "healthy-recipes",
+      "title": "Healthy Recipes",
+      "icon": "ChefHat",
+      "description": "Quick recipes can keep healthy eating realistic on busy days.",
+      "items": ["Spinach and egg wrap", "Lentil soup", "Greek yogurt parfait", "Salmon rice bowl", "Chickpea salad"]
+    }
+  ],
+  "recipes": [
+    {
+      "title": "Iron Boost Bowl",
+      "time": "15 min",
+      "ingredients": ["Brown rice", "Lentils", "Spinach", "Cherry tomatoes", "Lemon"],
+      "steps": ["Warm the rice and lentils.", "Top with spinach and tomatoes.", "Finish with lemon juice and olive oil."]
+    },
+    {
+      "title": "Calcium Care Smoothie",
+      "time": "5 min",
+      "ingredients": ["Yogurt", "Banana", "Berries", "Chia seeds", "Milk or fortified plant milk"],
+      "steps": ["Blend until smooth.", "Add chia seeds after blending.", "Serve cold and fresh."]
+    }
+  ]
+}

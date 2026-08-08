@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "sleep",
+    "title": "Sleep",
+    "icon": "MoonStar",
+    "description": "Protecting bedtime and wake time helps regulate mood, energy, and cycle rhythm.",
+    "benefit": "Consistent sleep supports recovery and hormone balance.",
+    "goalText": "Sleep at least 7 hours tonight"
+  },
+  {
+    "slug": "exercise",
+    "title": "Exercise",
+    "icon": "Dumbbell",
+    "description": "Movement can improve circulation, reduce stress, and support cycle comfort.",
+    "benefit": "Regular movement supports stamina and confidence.",
+    "goalText": "Move your body for 20 minutes"
+  },
+  {
+    "slug": "stress",
+    "title": "Stress",
+    "icon": "BrainCircuit",
+    "description": "Notice tension early so stress does not quietly take over your day.",
+    "benefit": "Stress regulation helps mood and focus stay steadier.",
+    "goalText": "Take 3 slow breathing breaks"
+  },
+  {
+    "slug": "meditation",
+    "title": "Meditation",
+    "icon": "Sparkles",
+    "description": "Short mindfulness sessions can help reset the nervous system.",
+    "benefit": "Meditation creates a pause that can reduce reactivity.",
+    "goalText": "Practice 10 minutes of mindfulness"
+  },
+  {
+    "slug": "daily-goals",
+    "title": "Daily Goals",
+    "icon": "Target",
+    "description": "Choose goals that are realistic for the energy you have today.",
+    "benefit": "Small goals are easier to finish and repeat.",
+    "goalText": "Complete your top 3 priorities"
+  },
+  {
+    "slug": "self-care",
+    "title": "Self Care",
+    "icon": "HeartHandshake",
+    "description": "Self-care works best when it is practical, not performative.",
+    "benefit": "Simple care habits help you feel supported and restored.",
+    "goalText": "Do one nourishing thing for yourself"
+  }
+]

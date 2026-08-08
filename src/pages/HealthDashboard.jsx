@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Activity, CalendarDays, Droplets, HeartPulse, Pill, Sparkles, Smile, ThermometerSun } from 'lucide-react'
+import { Activity, ArrowRight, BookOpenText, CalendarDays, Droplets, HeartPulse, Pill, Smile, Sparkles, ThermometerSun } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import DashboardLayout from '../layouts/DashboardLayout'
 import DashboardCard from '../components/DashboardCard'
 import StatisticsCards from '../components/StatisticsCards'

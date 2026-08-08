@@ -1,11 +1,13 @@
-import { BarChart3, CalendarDays, Compass, HeartPulse, House, MessageCircleHeart, ShieldCheck, Sparkles, UserCircle2 } from 'lucide-react'
+import { BookOpenText, BarChart3, CalendarDays, HeartPulse, House, MessageCircleHeart, Salad, Sparkles, UserCircle2 } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 const navItems = [
-  { label: 'Overview', icon: House, to: '/dashboard' },
-  { label: 'Cycle', icon: CalendarDays, to: '/dashboard' },
-  { label: 'Insights', icon: BarChart3, to: '/dashboard' },
-  { label: 'Support', icon: MessageCircleHeart, to: '/dashboard' },
+  { label: 'Dashboard Home', icon: House, to: '/dashboard' },
+  { label: 'Disease Library', icon: BarChart3, to: '/diseases' },
+  { label: 'Health Education', icon: BookOpenText, to: '/education' },
+  { label: 'Nutrition Guide', icon: Salad, to: '/nutrition' },
+  { label: 'Wellness Tracker', icon: Sparkles, to: '/wellness' },
+  { label: 'Articles', icon: MessageCircleHeart, to: '/articles' },
 ]
 
 const DashboardSidebar = () => {
@@ -17,7 +19,7 @@ const DashboardSidebar = () => {
         </div>
         <div>
           <p className="text-sm font-medium text-[#E91E63]">HerCare</p>
-          <p className="text-xs text-[#666666]">Women’s wellness</p>
+          <p className="text-xs text-[#666666]">Women’s wellness hub</p>
         </div>
       </div>
 
@@ -50,7 +52,7 @@ const DashboardSidebar = () => {
 
       <div className="mt-auto rounded-[1.5rem] border border-pink-100 bg-gradient-to-br from-[#FFF8FA] to-[#F8BBD0] p-4">
         <div className="flex items-center gap-2 text-[#9C27B0]">
-          <ShieldCheck size={18} />
+          <HeartPulse size={18} />
           <p className="text-sm font-semibold">Your care is protected</p>
         </div>
         <p className="mt-2 text-sm leading-6 text-[#666666]">Personal insights stay private and elegantly organized in one place.</p>
