@@ -1,5 +1,4 @@
-import { ArrowRight, CalendarDays, Clock3, Flower2, HeartPulse, Leaf, MoonStar, Sparkles, UserCircle2, UtensilsCrossed } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ArrowRight, Bookmark, CalendarDays, Clock3, Flower2, HeartPulse, Leaf, MoonStar, Sparkles, UserCircle2, UtensilsCrossed } from 'lucide-react'
 
 const iconMap = {
   'Hormonal Health': HeartPulse,
@@ -46,20 +45,32 @@ const buildImage = (article) => {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`
 }
 
-const ArticleCard = ({ article, onReadMore }) => {
+const ArticleCard = ({ article, onReadMore, isSaved = false, onToggleSave }) => {
   const imageSource = buildImage(article)
   const AccentIcon = iconMap[article.category] || HeartPulse
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[1.4rem] border border-pink-100 bg-white shadow-[0_16px_45px_-30px_rgba(233,30,99,0.24)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_60px_-28px_rgba(233,30,99,0.3)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[1.4rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] shadow-[0_16px_45px_-30px_rgba(233,30,99,0.24)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_60px_-28px_rgba(233,30,99,0.3)]">
       <div className="relative overflow-hidden">
         <img src={imageSource} alt={article.title} className="h-28 w-full object-cover transition duration-500 group-hover:scale-[1.02] sm:h-32" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/5" />
         <div className="absolute left-4 top-4 rounded-full bg-white/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm backdrop-blur">
           {article.category}
         </div>
-        <div className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/18 text-white shadow-sm backdrop-blur">
-          <AccentIcon size={20} strokeWidth={2.2} />
+        <div className="absolute right-4 top-4 flex items-center gap-2">
+          {onToggleSave ? (
+            <button
+              type="button"
+              onClick={() => onToggleSave(article.slug)}
+              aria-label={isSaved ? 'Remove article from saved list' : 'Save article for later'}
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/18 text-white shadow-sm backdrop-blur transition hover:scale-105"
+            >
+              <Bookmark size={18} fill={isSaved ? 'currentColor' : 'none'} />
+            </button>
+          ) : null}
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/18 text-white shadow-sm backdrop-blur">
+            <AccentIcon size={20} strokeWidth={2.2} />
+          </div>
         </div>
       </div>
 
@@ -101,7 +112,7 @@ const ArticleCard = ({ article, onReadMore }) => {
         <button
           type="button"
           onClick={onReadMore}
-          className="mt-4 inline-flex self-start items-center gap-2 text-sm font-semibold text-[#E91E63] transition hover:text-[#c2185b]"
+          className="mt-4 inline-flex self-start items-center gap-2 rounded-full bg-[var(--app-primary)] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--app-primary-strong)]"
         >
           Read More
           <ArrowRight className="h-4 w-4" />

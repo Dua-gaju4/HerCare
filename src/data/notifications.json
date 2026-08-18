@@ -1,0 +1,42 @@
+[
+  {
+    "id": "notification-1",
+    "type": "community",
+    "title": "New reply in Community Feed",
+    "message": "Maya replied to your hydration post.",
+    "time": "10 minutes ago",
+    "read": false
+  },
+  {
+    "id": "notification-2",
+    "type": "article",
+    "title": "New educational article",
+    "message": "A guide about cycle-friendly nutrition is now available.",
+    "time": "1 hour ago",
+    "read": false
+  },
+  {
+    "id": "notification-3",
+    "type": "wellness",
+    "title": "Wellness reminder",
+    "message": "Take a short movement break and drink water.",
+    "time": "Today, 9:00 AM",
+    "read": true
+  },
+  {
+    "id": "notification-4",
+    "type": "medicine",
+    "title": "Medicine reminder",
+    "message": "Your evening medication reminder is due soon.",
+    "time": "Today, 6:00 PM",
+    "read": false
+  },
+  {
+    "id": "notification-5",
+    "type": "system",
+    "title": "System notification",
+    "message": "Your data is saved locally in this browser.",
+    "time": "Yesterday",
+    "read": true
+  }
+]

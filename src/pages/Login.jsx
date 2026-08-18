@@ -20,23 +20,23 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFF8FA] px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-[2rem] border border-pink-100 bg-white/80 shadow-[0_25px_80px_-30px_rgba(233,30,99,0.35)] lg:flex-row">
-        <div className="flex flex-1 flex-col justify-between bg-gradient-to-br from-[#FFF8FA] via-white to-[#F8BBD0] p-8 sm:p-10 lg:p-12">
+    <div className="min-h-screen bg-[var(--app-bg)] px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-[2rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] shadow-[0_25px_80px_-30px_rgba(233,30,99,0.35)] lg:flex-row">
+        <div className="flex flex-1 flex-col justify-between bg-gradient-to-br from-[#FFF8FA] via-white to-[#F8BBD0] p-8 sm:p-10 lg:p-12 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
           <div>
-            <div className="flex items-center gap-2 text-[#E91E63]">
+            <div className="flex items-center gap-2 text-[var(--app-primary)]">
               <HeartPulse size={22} />
               <span className="text-lg font-semibold tracking-[0.2em]">HerCare</span>
             </div>
-            <h1 className="mt-8 text-3xl font-semibold text-[#333333] sm:text-4xl">Welcome back</h1>
-            <p className="mt-4 max-w-md text-lg leading-8 text-[#666666]">
+            <h1 className="mt-8 text-3xl font-semibold text-[var(--app-text)] sm:text-4xl">Welcome back</h1>
+            <p className="mt-4 max-w-md text-lg leading-8 text-[var(--app-muted)]">
               Sign in to continue your wellness routine with thoughtful guidance and elegant insights.
             </p>
           </div>
 
-          <div className="mt-10 rounded-[1.5rem] border border-pink-100 bg-white/80 p-5 shadow-sm">
-            <p className="text-sm font-semibold text-[#E91E63]">Your care, your pace</p>
-            <p className="mt-2 text-sm leading-7 text-[#666666]">
+          <div className="mt-10 rounded-[1.5rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] p-5 shadow-sm">
+            <p className="text-sm font-semibold text-[var(--app-primary)]">Your care, your pace</p>
+            <p className="mt-2 text-sm leading-7 text-[var(--app-muted)]">
               Every section is kept private, reassuring, and easy to revisit whenever you need a calm moment.
             </p>
           </div>
@@ -45,14 +45,14 @@ const Login = () => {
         <div className="flex-1 p-8 sm:p-10 lg:p-12">
           <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-5">
             <div>
-              <label className="mb-2 block text-sm font-medium text-[#333333]">Email address</label>
-              <div className="flex items-center rounded-2xl border border-pink-100 bg-[#FFF8FA] px-4 py-3">
-                <Mail size={18} className="text-[#E91E63]" />
+              <label className="mb-2 block text-sm font-medium text-[var(--app-text)]">Email address</label>
+              <div className="flex items-center rounded-2xl border border-[var(--app-border)] bg-[var(--app-surface)] px-4 py-3">
+                <Mail size={18} className="text-[var(--app-primary)]" />
                 <input
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  className="ml-3 w-full bg-transparent outline-none"
+                  className="ml-3 w-full bg-transparent outline-none text-[var(--app-text)] placeholder:text-[var(--app-muted)]"
                   placeholder="you@example.com"
                   required
                 />
@@ -60,14 +60,14 @@ const Login = () => {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-[#333333]">Password</label>
-              <div className="flex items-center rounded-2xl border border-pink-100 bg-[#FFF8FA] px-4 py-3">
-                <Lock size={18} className="text-[#E91E63]" />
+              <label className="mb-2 block text-sm font-medium text-[var(--app-text)]">Password</label>
+              <div className="flex items-center rounded-2xl border border-[var(--app-border)] bg-[var(--app-surface)] px-4 py-3">
+                <Lock size={18} className="text-[var(--app-primary)]" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  className="ml-3 w-full bg-transparent outline-none"
+                  className="ml-3 w-full bg-transparent outline-none text-[var(--app-text)] placeholder:text-[var(--app-muted)]"
                   placeholder="••••••••"
                   required
                 />
@@ -77,21 +77,21 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-sm text-[#666666]">
+            <div className="flex items-center justify-between text-sm text-[var(--app-muted)]">
               <label className="flex items-center gap-2">
-                <input type="checkbox" className="rounded border-pink-200 text-[#E91E63]" />
+                <input type="checkbox" className="rounded border-pink-200 text-[var(--app-primary)]" />
                 Remember me
               </label>
-              <a href="#" className="font-medium text-[#E91E63]">Forgot password?</a>
+              <a href="#" className="font-medium text-[var(--app-primary)]">Forgot password?</a>
             </div>
 
-            <button type="submit" className="w-full rounded-full bg-[#E91E63] px-4 py-3 font-semibold text-white transition hover:bg-[#d51a5f]">
+            <button type="submit" className="w-full rounded-full bg-[var(--app-primary)] px-4 py-3 font-semibold text-white transition hover:bg-[var(--app-primary-strong)]">
               Login
             </button>
 
-            <p className="text-center text-sm text-[#666666]">
+            <p className="text-center text-sm text-[var(--app-muted)]">
               New here?{' '}
-              <Link to="/signup" className="font-semibold text-[#E91E63]">
+              <Link to="/signup" className="font-semibold text-[var(--app-primary)]">
                 Create an account
               </Link>
             </p>

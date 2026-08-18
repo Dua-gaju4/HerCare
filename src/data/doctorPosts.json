@@ -1,0 +1,35 @@
+[
+  {
+    "id": "doctor-1",
+    "doctorName": "Dr. Elena Foster",
+    "avatar": "EF",
+    "specialty": "OB-GYN",
+    "verified": true,
+    "date": "Aug 6, 2026",
+    "title": "Understanding cycle tracking as a self-care tool",
+    "content": "Educational note: cycle tracking can help you notice recurring symptoms, energy shifts, and timing patterns. The goal is awareness, not perfection.",
+    "category": "Cycle Health"
+  },
+  {
+    "id": "doctor-2",
+    "doctorName": "Dr. Priya Menon",
+    "avatar": "PM",
+    "specialty": "Internal Medicine",
+    "verified": true,
+    "date": "Aug 4, 2026",
+    "title": "Hydration, sleep, and fatigue are linked",
+    "content": "Educational note: if fatigue feels persistent, review sleep, hydration, meals, and stress before assuming it is only one cause. Small habit changes can help clarify patterns.",
+    "category": "Daily Wellness"
+  },
+  {
+    "id": "doctor-3",
+    "doctorName": "Dr. Amara Ellis",
+    "avatar": "AE",
+    "specialty": "Nutrition Science",
+    "verified": true,
+    "date": "Aug 1, 2026",
+    "title": "Gentle nutrition beats restrictive habits",
+    "content": "Educational note: sustainable nutrition works best when it feels realistic. Balanced meals, regular hydration, and enough protein often support better day-to-day energy.",
+    "category": "Nutrition"
+  }
+]

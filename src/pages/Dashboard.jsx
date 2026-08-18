@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, Compass, HeartPulse, Sparkles, Stethoscope, TrendingUp } from 'lucide-react'
+import { ArrowRight, HeartPulse, Sparkles, TrendingUp } from 'lucide-react'
 import DashboardLayout from '../layouts/DashboardLayout'
 import { dashboardStats, quickActions, recentActivities } from '../data/mockData'
 

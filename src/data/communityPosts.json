@@ -1,0 +1,50 @@
+[
+  {
+    "id": "community-1",
+    "userName": "Nina Carter",
+    "avatar": "NC",
+    "category": "Cycle Support",
+    "timestamp": "2 hours ago",
+    "title": "Tracking symptoms made my routine calmer",
+    "content": "I started logging my cramps and energy levels every morning. It helped me spot patterns and plan my week with more confidence.",
+    "likes": 24,
+    "comments": 5,
+    "shares": 2
+  },
+  {
+    "id": "community-2",
+    "userName": "Maya Singh",
+    "avatar": "MS",
+    "category": "Wellness Win",
+    "timestamp": "5 hours ago",
+    "title": "Hydration reminder that actually works",
+    "content": "I keep the water tracker open while I work and it has become a tiny habit that changes my whole day. The progress ring keeps me motivated.",
+    "likes": 36,
+    "comments": 9,
+    "shares": 4
+  },
+  {
+    "id": "community-3",
+    "userName": "Sofia Lee",
+    "avatar": "SL",
+    "category": "Self Care",
+    "timestamp": "Yesterday",
+    "title": "Rest is part of the plan",
+    "content": "Sharing this for anyone who needs it: taking one quiet evening to rest is still progress. Small care counts.",
+    "likes": 51,
+    "comments": 14,
+    "shares": 6
+  },
+  {
+    "id": "community-4",
+    "userName": "Aaliyah Brooks",
+    "avatar": "AB",
+    "category": "Nutrition",
+    "timestamp": "2 days ago",
+    "title": "Balanced meals helped my energy",
+    "content": "I paired the nutrition guide with my medication reminders and noticed fewer mid-afternoon crashes. Consistency matters more than perfection.",
+    "likes": 18,
+    "comments": 3,
+    "shares": 1
+  }
+]

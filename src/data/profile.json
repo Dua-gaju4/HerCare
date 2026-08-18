@@ -1,0 +1,14 @@
+{
+  "fullName": "Ava Rivera",
+  "email": "ava.rivera@hercare.test",
+  "memberSince": "January 2024",
+  "avatar": "AR",
+  "healthPreferences": ["Cycle tracking", "Wellness reminders", "Community updates"],
+  "activitySummary": [
+    { "label": "Check-ins this week", "value": "12" },
+    { "label": "Saved articles", "value": "3" },
+    { "label": "Goals completed", "value": "5" }
+  ],
+  "savedArticles": ["balanced-hormones-through-nutrition", "understanding-period-pain"],
+  "wellnessGoalsCompleted": ["hydration-routine", "wind-down-routine"]
+}

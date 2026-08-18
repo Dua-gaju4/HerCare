@@ -4,7 +4,6 @@ import {
   CalendarDays,
   Compass,
   HeartPulse,
-  MessageCircleHeart,
   ShieldCheck,
   Sparkles,
   Stethoscope,

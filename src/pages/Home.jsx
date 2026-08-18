@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, ChevronDown, HeartPulse, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ChevronDown, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import FeatureCard from '../components/FeatureCard'
 import Footer from '../components/Footer'
@@ -8,7 +8,7 @@ import { faqs, features, stats, testimonials } from '../data/mockData'
 
 const Home = () => {
   return (
-    <div id="top" className="min-h-screen bg-[#FFF8FA] text-[#333333]">
+    <div id="top" className="min-h-screen bg-[var(--app-bg)] text-[var(--app-text)]">
       <Navbar />
       <Hero />
 

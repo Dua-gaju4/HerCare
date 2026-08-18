@@ -3,28 +3,17 @@ import { HeartPulse, Sparkles } from 'lucide-react'
 import ModulePageShell from '../components/ModulePageShell'
 import WellnessCard from '../components/WellnessCard'
 import wellnessTips from '../data/wellnessTips.json'
+import { readStorageValue, writeStorageValue } from '../utils/storage'
 
 const STORAGE_KEY = 'hercare-wellness-progress'
 
-const getStoredProgress = () => {
-  if (typeof window === 'undefined') {
-    return []
-  }
-
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : []
-  } catch (error) {
-    console.error('Unable to read wellness tracker state', error)
-    return []
-  }
-}
+const getStoredProgress = () => readStorageValue(STORAGE_KEY, [])
 
 const WellnessTracker = () => {
   const [completedGoals, setCompletedGoals] = useState(getStoredProgress())
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(completedGoals))
+    writeStorageValue(STORAGE_KEY, completedGoals)
   }, [completedGoals])
 
   const progressPercentage = useMemo(() => Math.round((completedGoals.length / wellnessTips.length) * 100), [completedGoals.length])
@@ -36,10 +25,10 @@ const WellnessTracker = () => {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFF8FA] px-4 py-6 text-[#333333] sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[var(--app-bg)] px-4 py-6 text-[var(--app-text)] sm:px-6 lg:px-8">
       <ModulePageShell>
         <div className="mx-auto max-w-7xl space-y-6">
-        <section className="rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white via-[#FFF8FA] to-[#FDE7F3] p-6 shadow-[0_24px_70px_-34px_rgba(233,30,99,0.26)] md:p-8">
+        <section className="rounded-[2rem] border border-[var(--app-border)] bg-gradient-to-br from-white via-[#FFF8FA] to-[#FDE7F3] p-6 shadow-[0_24px_70px_-34px_rgba(233,30,99,0.26)] md:p-8 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E91E63]">Wellness tracker</p>
@@ -49,7 +38,7 @@ const WellnessTracker = () => {
               </p>
             </div>
 
-            <div className="rounded-[1.4rem] border border-pink-100 bg-white/80 p-5 shadow-sm">
+            <div className="rounded-[1.4rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] p-5 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="rounded-2xl bg-[#FFF8FA] p-3 text-[#E91E63]">
                   <HeartPulse size={20} />
@@ -73,7 +62,7 @@ const WellnessTracker = () => {
           ))}
         </section>
 
-        <section className="rounded-[1.8rem] border border-pink-100 bg-white/90 p-6 shadow-sm">
+          <section className="rounded-[1.8rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] p-6 shadow-sm">
           <div className="flex items-center gap-3 text-[#E91E63]">
             <Sparkles size={20} />
             <p className="text-sm font-semibold uppercase tracking-[0.24em]">Empty state support</p>

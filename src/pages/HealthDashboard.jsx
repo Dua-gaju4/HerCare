@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Activity, ArrowRight, BookOpenText, CalendarDays, Droplets, HeartPulse, Pill, Smile, Sparkles, ThermometerSun } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Activity, CalendarDays, Droplets, HeartPulse, Pill, Smile, Sparkles, ThermometerSun } from 'lucide-react'
 import DashboardLayout from '../layouts/DashboardLayout'
 import DashboardCard from '../components/DashboardCard'
 import StatisticsCards from '../components/StatisticsCards'
@@ -13,6 +12,7 @@ import MedicineReminder from '../components/MedicineReminder'
 import { moodLabelMap } from '../data/moods'
 import { symptomOptions } from '../data/symptoms'
 import { buildCalendarMonth, formatShortDate, getCyclePrediction, parseDateInput, startOfDay, toDateString } from '../utils/prediction'
+import { readStorageValue, writeStorageValue } from '../utils/storage'
 
 const STORAGE_KEY = 'hercare-health-dashboard'
 const WATER_GOAL = 8
@@ -30,19 +30,7 @@ const defaultState = {
   reminders: [],
 }
 
-const getStoredState = () => {
-  if (typeof window === 'undefined') {
-    return defaultState
-  }
-
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    return raw ? { ...defaultState, ...JSON.parse(raw) } : defaultState
-  } catch (error) {
-    console.error('Unable to load health dashboard state', error)
-    return defaultState
-  }
-}
+const getStoredState = () => ({ ...defaultState, ...readStorageValue(STORAGE_KEY, defaultState) })
 
 const HealthDashboard = () => {
   const storedState = useMemo(() => getStoredState(), [])
@@ -65,7 +53,7 @@ const HealthDashboard = () => {
       reminders,
     }
 
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot))
+    writeStorageValue(STORAGE_KEY, snapshot)
   }, [savedCycle, moods, moodSelection, selectedSymptoms, waterCount, reminders])
 
   const prediction = useMemo(() => {
@@ -202,28 +190,28 @@ const HealthDashboard = () => {
   return (
     <DashboardLayout>
       <div className="space-y-6 pb-10">
-        <section className="overflow-hidden rounded-[2rem] border border-pink-100 bg-gradient-to-br from-[#FFF8FA] via-white to-[#F8BBD0] p-6 shadow-[0_24px_70px_-35px_rgba(233,30,99,0.35)] md:p-8">
+        <section className="overflow-hidden rounded-[2rem] border border-[var(--app-border)] bg-gradient-to-br from-[#FFF8FA] via-white to-[#F8BBD0] p-6 shadow-[0_24px_70px_-35px_rgba(233,30,99,0.35)] md:p-8 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white/70 px-4 py-2 text-sm font-semibold text-[#E91E63] shadow-sm">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--app-border)] bg-[var(--app-surface-strong)] px-4 py-2 text-sm font-semibold text-[var(--app-primary)] shadow-sm">
                 <HeartPulse size={16} />
                 HerCare health dashboard
               </div>
-              <h1 className="text-3xl font-semibold tracking-tight text-[#333333] sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-semibold tracking-tight text-[var(--app-text)] sm:text-4xl lg:text-5xl">
                 Your body story, organized in one calm, beautiful space.
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-[#666666] sm:text-lg">
+              <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--app-muted)] sm:text-lg">
                 Track your cycle, mood, symptoms, hydration, and medications with responsive cards, local storage, and live predictions.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-[1.35rem] border border-pink-100 bg-white/80 p-4 shadow-sm">
-                <p className="text-sm text-[#666666]">Current status</p>
-                <p className="mt-2 text-lg font-semibold text-[#333333]">{prediction.currentCycleDay ? `Cycle day ${prediction.currentCycleDay}` : 'Cycle not saved yet'}</p>
+              <div className="rounded-[1.35rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] p-4 shadow-sm">
+                <p className="text-sm text-[var(--app-muted)]">Current status</p>
+                <p className="mt-2 text-lg font-semibold text-[var(--app-text)]">{prediction.currentCycleDay ? `Cycle day ${prediction.currentCycleDay}` : 'Cycle not saved yet'}</p>
               </div>
-              <div className="rounded-[1.35rem] border border-pink-100 bg-white/80 p-4 shadow-sm">
-                <p className="text-sm text-[#666666]">Today</p>
-                <p className="mt-2 text-lg font-semibold text-[#333333]">{formatShortDate(new Date())}</p>
+              <div className="rounded-[1.35rem] border border-[var(--app-border)] bg-[var(--app-surface-strong)] p-4 shadow-sm">
+                <p className="text-sm text-[var(--app-muted)]">Today</p>
+                <p className="mt-2 text-lg font-semibold text-[var(--app-text)]">{formatShortDate(new Date())}</p>
               </div>
             </div>
           </div>

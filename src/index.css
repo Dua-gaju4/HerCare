@@ -2,12 +2,33 @@
 
 :root {
   font-family: Inter, 'Segoe UI', sans-serif;
-  color: #333333;
-  background-color: #FFF8FA;
+  color-scheme: light;
+  color: var(--app-text);
+  background-color: var(--app-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --app-bg: #fff8fa;
+  --app-surface: rgba(255, 255, 255, 0.82);
+  --app-surface-strong: #ffffff;
+  --app-text: #333333;
+  --app-muted: #666666;
+  --app-border: rgba(233, 30, 99, 0.14);
+  --app-primary: #e91e63;
+  --app-primary-strong: #c2185b;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --app-bg: #0f172a;
+  --app-surface: rgba(15, 23, 42, 0.75);
+  --app-surface-strong: rgba(15, 23, 42, 0.95);
+  --app-text: #e2e8f0;
+  --app-muted: #94a3b8;
+  --app-border: rgba(244, 114, 182, 0.18);
+  --app-primary: #fb7185;
+  --app-primary-strong: #f43f5e;
 }
 
 html {
@@ -18,13 +39,24 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #FFF8FA;
+  background: var(--app-bg);
+  color: var(--app-text);
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 #root {
   min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--app-text);
 }

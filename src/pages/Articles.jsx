@@ -4,22 +4,36 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import ArticleCard from '../components/ArticleCard'
 import ModulePageShell from '../components/ModulePageShell'
 import articlesData from '../data/articles.json'
+import { readStorageValue, writeStorageValue } from '../utils/storage'
+
+const SAVED_ARTICLES_KEY = 'hercare-saved-articles'
 
 const Articles = () => {
   const { slug } = useParams()
   const navigate = useNavigate()
   const [isReady, setIsReady] = useState(false)
+  const [savedArticles, setSavedArticles] = useState(() => readStorageValue(SAVED_ARTICLES_KEY, []))
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsReady(true), 400)
     return () => window.clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    writeStorageValue(SAVED_ARTICLES_KEY, savedArticles)
+  }, [savedArticles])
+
   const selectedArticle = useMemo(() => articlesData.find((article) => article.slug === slug), [slug])
+
+  const handleToggleSave = (articleSlug) => {
+    setSavedArticles((previous) =>
+      previous.includes(articleSlug) ? previous.filter((item) => item !== articleSlug) : [...previous, articleSlug],
+    )
+  }
 
   if (slug && !selectedArticle) {
     return (
-      <main className="min-h-screen bg-[#FFF8FA] px-4 py-8 text-[#333333] sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-[var(--app-bg)] px-4 py-8 text-[var(--app-text)] sm:px-6 lg:px-8">
         <ModulePageShell>
           <div className="mx-auto max-w-4xl rounded-[2rem] border border-pink-100 bg-white p-8 text-center shadow-sm">
             <p className="text-2xl font-semibold">Article not found</p>
@@ -34,7 +48,7 @@ const Articles = () => {
 
   if (selectedArticle) {
     return (
-      <main className="min-h-screen bg-[#FFF8FA] px-4 py-6 text-[#333333] sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-[var(--app-bg)] px-4 py-6 text-[var(--app-text)] sm:px-6 lg:px-8">
         <ModulePageShell>
           <div className="mx-auto max-w-5xl space-y-6">
             <button
@@ -72,7 +86,7 @@ const Articles = () => {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFF8FA] px-4 py-6 text-[#333333] sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[var(--app-bg)] px-4 py-6 text-[var(--app-text)] sm:px-6 lg:px-8">
       <ModulePageShell>
         <div className="mx-auto max-w-7xl space-y-6">
           <section className="overflow-hidden rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white via-[#FFF8FA] to-[#FDE7F3] p-6 shadow-[0_24px_70px_-34px_rgba(233,30,99,0.26)] md:p-8">
@@ -128,7 +142,13 @@ const Articles = () => {
           ) : (
             <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {articlesData.map((article) => (
-                <ArticleCard key={article.slug} article={article} onReadMore={() => navigate(`/articles/${article.slug}`)} />
+                <ArticleCard
+                  key={article.slug}
+                  article={article}
+                  onReadMore={() => navigate(`/articles/${article.slug}`)}
+                  isSaved={savedArticles.includes(article.slug)}
+                  onToggleSave={handleToggleSave}
+                />
               ))}
             </section>
           )}

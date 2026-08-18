@@ -1,31 +1,65 @@
 const AUTH_KEY = 'hercare-auth'
 
-export const getAuthState = () => {
+export const readStorageValue = (key, fallback) => {
   if (typeof window === 'undefined') {
-    return null
+    return fallback
   }
 
   try {
-    const raw = window.localStorage.getItem(AUTH_KEY)
-    return raw ? JSON.parse(raw) : null
+    const raw = window.localStorage.getItem(key)
+    return raw ? JSON.parse(raw) : fallback
   } catch (error) {
-    console.error('Unable to read auth state', error)
-    return null
+    console.error(`Unable to read local storage key: ${key}`, error)
+    return fallback
   }
+}
+
+export const writeStorageValue = (key, value) => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value))
+  } catch (error) {
+    console.error(`Unable to write local storage key: ${key}`, error)
+  }
+}
+
+export const removeStorageValue = (key) => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    window.localStorage.removeItem(key)
+  } catch (error) {
+    console.error(`Unable to remove local storage key: ${key}`, error)
+  }
+}
+
+export const clearHerCareStorage = () => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    Object.keys(window.localStorage)
+      .filter((key) => key.startsWith('hercare-'))
+      .forEach((key) => window.localStorage.removeItem(key))
+  } catch (error) {
+    console.error('Unable to clear HerCare local storage', error)
+  }
+}
+
+export const getAuthState = () => {
+  return readStorageValue(AUTH_KEY, null)
 }
 
 export const saveAuthState = (user) => {
-  if (typeof window === 'undefined') {
-    return
-  }
-
-  window.localStorage.setItem(AUTH_KEY, JSON.stringify({ isAuthenticated: true, user }))
+  writeStorageValue(AUTH_KEY, { isAuthenticated: true, user })
 }
 
 export const clearAuthState = () => {
-  if (typeof window === 'undefined') {
-    return
-  }
-
-  window.localStorage.removeItem(AUTH_KEY)
+  removeStorageValue(AUTH_KEY)
 }
